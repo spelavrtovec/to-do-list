@@ -80,7 +80,7 @@ class Home extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.state.todos.map((todo,i) => {
+            {this.state.todos.map((todo,i) => {
               return (<TodoItem key={i} todo={todo} onDelete={()=>this.handleDelete(todo._id)}/>)
             })}
           </tbody>

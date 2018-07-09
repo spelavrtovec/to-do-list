@@ -27,15 +27,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React Countries</h1>
+          <h1 className="App-title">IronTodo</h1>
           <Link to="/">Home</Link> 
-          <Link to="/countries">Countries</Link> 
-          <Link to="/add-country">Add country</Link> 
           {!api.isLoggedIn() && <Link to="/signup">Signup</Link> }
           {!api.isLoggedIn() && <Link to="/login">Login</Link> }
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link> }
-          <Link to="/secret">Secret</Link> 
         </header>
         <Switch>
           <Route path="/" exact component={Home} />
